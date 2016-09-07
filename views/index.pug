@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  body(id='page-top',data-spy='scroll',data-target='.navbar',data-offset='50')
+    div(class='container')  
+      nav(id="myNavbar",class='navbar navbar-inverse navbar-fixed-top navbar-custom')
+        div(class='container')
+          div(class='navbar-header page-scroll')            
+            button(type="button",class="navbar-toggle",data-toggle="collapse",data-target="#bs-example-navbar-collapse-1")
+              span(class="icon-bar")
+              span(class="icon-bar")
+              span(class="icon-bar")            
+            a(class='navbar-brand' href='#page-top')=pagetitle    
+          div(class="collapse navbar-collapse",id="bs-example-navbar-collapse-1")        
+            ul(class='nav navbar-nav navbar-right')
+              li(class="hidden")
+                a(href='#page-top')
+              li(class="page-scroll")
+                a(href='#team') Team              
+              li(class="page-scroll")
+                a(href='#services') Services
+              li(class="page-scroll")
+                a(href='#contact') Contact          
+      img(class='img-responsive center-block',src='images/LogoSloganBig.png',alt="Logs",)
+      section(id='team')
+        div(class='container section jumbotron')
+          include ./team.pug
+      section(id='services')
+        div(class='container section jumbotron')      
+          include ./services.pug
+      section(id='contact')
+        div(class='container section jumbotron')      
+          include ./contact.pug
